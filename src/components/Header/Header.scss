@@ -1,0 +1,40 @@
+@use '../../assets/styles/variables';
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    @media screen and (max-width: 375px) {
+      width: 145px;
+    }
+  }
+}
+
+.navbar {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__link {
+    margin-left: 57px;
+    text-decoration: none;
+    font-size: variables.$font-size-large;
+    font-weight: variables.$font-weight-regular;
+    color: variables.$tertiary-color;
+
+    @media screen and (max-width: 375px) {
+      margin-left: 25px;
+      font-size: 12px;
+    }
+  }
+
+  &__link--active {
+    text-decoration: underline;
+  }
+}
