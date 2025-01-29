@@ -1,8 +1,11 @@
+import DarkLogo from '../../assets/images/logo_kasa_dark.png'
+import './Footer.scss'
+
 function Footer() {
   return (
-    <footer>
-      <h1>KASA</h1>
-      <span>©️ 2020 Kasa. All rights reserved</span>
+    <footer className="footer">
+      <img className="footer__image" src={DarkLogo} alt="Logo de Kasa" />
+      <span className="footer__text">© 2020 Kasa. All rights reserved</span>
     </footer>
   )
 }

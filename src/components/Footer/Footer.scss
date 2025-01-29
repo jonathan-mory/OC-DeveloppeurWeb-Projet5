@@ -1,0 +1,18 @@
+@use '../../assets/styles/variables';
+
+.footer {
+  background-color: black;
+  padding: 66px 0;
+}
+
+.footer__image {
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.footer__text {
+  display: block;
+  text-align: center;
+  color: variables.$secondary-color;
+}
