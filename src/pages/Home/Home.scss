@@ -1,0 +1,19 @@
+@use '../../assets/styles/variables';
+
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 50px;
+  margin: 50px auto;
+  padding: 50px;
+  background-color: variables.$background-color;
+  border-radius: variables.$banner-radius;
+
+  @media screen and (max-width: 375px) {
+    margin: 25px 0 25px 0;
+    padding: 0;
+    background: none;
+    gap: 20px;
+  }
+}
