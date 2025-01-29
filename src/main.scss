@@ -1,0 +1,33 @@
+@use './assets/styles/variables';
+
+// Styles de base
+
+body {
+  margin: 0;
+  font-family: variables.$primary-font;
+}
+
+header,
+main {
+  max-width: 1240px;
+}
+
+header {
+  margin: 50px auto;
+
+  @media screen and (max-width: 375px) {
+    margin: 20px 20px 30px 20px;
+  }
+}
+
+main {
+  margin: auto;
+
+  @media screen and (max-width: 375px) {
+    margin: 0 20px 30px 20px;
+  }
+}
+
+h1 {
+  font-size: variables.$font-size-large-heading;
+}
