@@ -3,8 +3,8 @@ import Home from '../../pages/Home'
 import Accommodation from '../../pages/Accommodation'
 import About from '../../pages/About'
 import Error from '../../pages/Error'
-import Header from '../Header/index.jsx'
-import Footer from '../Footer/index.jsx'
+import Header from '../Header'
+import Footer from '../Footer'
 
 function Router() {
   return (
