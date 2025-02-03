@@ -1,0 +1,45 @@
+@use '../../assets/styles/variables';
+
+.slideshow {
+  position: relative;
+  height: 415px;
+
+  &__button {
+    background: none;
+    border: none;
+    color: variables.$secondary-color;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    &--prev {
+      left: 25px;
+    }
+
+    &--next {
+      right: 25px;
+    }
+  }
+
+  &__icon {
+    height: 80px;
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: variables.$banner-radius;
+  }
+
+  &__indicator {
+    font-size: variables.$font-size-base;
+    font-weight: variables.$font-weight-regular;
+    color: variables.$secondary-color;
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+  }
+}
