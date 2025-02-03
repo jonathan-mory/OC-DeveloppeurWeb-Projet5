@@ -1,0 +1,60 @@
+@use '../../assets/styles/variables';
+
+.collapse {
+  width: 100%;
+
+  &--closed {
+    overflow: hidden;
+    max-height: 54px;
+    transition: max-height 400ms ease-in-out;
+  }
+
+  &--open {
+    max-height: 300px;
+    transition: max-height 400ms ease-in-out;
+  }
+
+  &__header {
+    height: 54px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    background-color: variables.$primary-color;
+    border-radius: variables.$collapse-radius;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: variables.$font-size-large;
+    font-weight: variables.$font-weight-bold;
+    color: variables.$secondary-color;
+  }
+
+  &__button {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &--open {
+      transform: rotate(-180deg);
+      transition: transform 400ms ease-in-out;
+    }
+
+    &--closed {
+      transform: rotate(0deg);
+      transition: transform 400ms ease-in-out;
+    }
+  }
+
+  &__icon {
+    color: variables.$secondary-color;
+    height: 24px;
+  }
+
+  &__content {
+    padding: 15px;
+    background-color: variables.$background-color;
+    border-radius: variables.$collapse-radius;
+  }
+}
