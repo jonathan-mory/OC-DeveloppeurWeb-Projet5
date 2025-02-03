@@ -12,17 +12,19 @@ main {
   max-width: 1240px;
 }
 
-header {
-  margin: 50px auto;
+header,
+main,
+footer {
+  margin: 50px auto 0 auto;
+}
 
+header {
   @media screen and (max-width: 375px) {
     margin: 20px 20px 30px 20px;
   }
 }
 
 main {
-  margin: auto;
-
   @media screen and (max-width: 375px) {
     margin: 0 20px 30px 20px;
   }
