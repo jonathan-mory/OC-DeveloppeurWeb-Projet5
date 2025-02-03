@@ -23,6 +23,7 @@ function Home() {
             key={element.id}
             title={element.title}
             coverUrl={element.cover}
+            id={element.id}
           />
         ))}
       </section>
