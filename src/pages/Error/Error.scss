@@ -1,0 +1,48 @@
+@use '../../assets/styles/variables';
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 140px;
+  margin: 140px auto 140px auto;
+  text-align: center;
+
+  @media screen and (max-width: 375px) {
+    margin: 110px auto 110px auto;
+    gap: 110px;
+  }
+
+  &__title,
+  &__description {
+    color: variables.$primary-color;
+  }
+
+  &__link {
+    color: variables.$tertiary-color;
+    font-size: variables.$font-size-base;
+
+    @media screen and (max-width: 375px) {
+      font-size: variables.$font-size-small;
+    }
+  }
+
+  &__title {
+    font-size: 288px;
+    font-weight: variables.$font-weight-bold;
+
+    @media screen and (max-width: 375px) {
+      font-size: 96px;
+    }
+  }
+
+  &__description {
+    font-size: variables.$font-size-small-heading;
+    font-weight: variables.$font-weight-regular;
+    display: block;
+
+    @media screen and (max-width: 375px) {
+      font-size: variables.$font-size-base;
+    }
+  }
+}
