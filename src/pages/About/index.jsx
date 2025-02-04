@@ -32,11 +32,9 @@ function About() {
       <Banner imageUrl={AboutBanner} />
       <div className="collapse-container">
         {aboutList.map((element, index) => (
-          <Collapse
-            key={`${element.title} - ${index}`}
-            title={element.title}
-            content={element.content}
-          />
+          <Collapse key={`${element.title} - ${index}`} title={element.title}>
+            <p>{element.content}</p>
+          </Collapse>
         ))}
       </div>
     </main>
