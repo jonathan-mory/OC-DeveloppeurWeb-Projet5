@@ -3,13 +3,19 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 import './Collapse.scss'
+import { useLocation } from 'react-router'
 
-function Collapse({ title, content }) {
+function Collapse({ title, children }) {
   const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation()
 
   return (
     <div
-      className={`collapse ${isOpen ? 'collapse--open' : 'collapse--closed'}`}
+      className={`${
+        location.pathname === '/' || location.pathname === '/about'
+          ? 'collapse--large'
+          : 'collapse--medium'
+      } ${isOpen ? 'collapse--open' : 'collapse--closed'}`}
     >
       <div className="collapse__header">
         <span className="collapse__title">{title}</span>
@@ -31,14 +37,14 @@ function Collapse({ title, content }) {
           />
         </button>
       </div>
-      <div className="collapse__content">{content}</div>
+      <div className="collapse__content">{children}</div>
     </div>
   )
 }
 
 Collapse.propTypes = {
   title: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired,
 }
 
 export default Collapse
