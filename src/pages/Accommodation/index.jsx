@@ -1,16 +1,14 @@
-import { useParams } from 'react-router'
+import { useNavigate, useParams } from 'react-router'
 import { useFetch } from '../../utils/hooks'
-import Error from '../Error'
 import Slideshow from '../../components/Slideshow'
 import Tag from '../../components/Tag'
 import Ratings from '../../components/Ratings'
 import Profile from '../../components/Profile'
 import Collapse from '../../components/Collapse'
-import './Accommodation.scss'
 
 function Accommodation() {
   const { accommodationId } = useParams()
-
+  const navigate = useNavigate()
   const dataUrl = '/accomodations.json'
   const { isLoading, data, error } = useFetch(dataUrl)
 
@@ -22,7 +20,7 @@ function Accommodation() {
   )
 
   if (!accommodationSearched) {
-    return <Error />
+    navigate('/error')
   } else {
     return (
       <main>

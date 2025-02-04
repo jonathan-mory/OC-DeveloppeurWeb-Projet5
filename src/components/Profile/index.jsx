@@ -1,6 +1,4 @@
 import PropTypes from 'prop-types'
-import './Profile.scss'
-
 function Profile({ hostName, hostPicture }) {
   return (
     <div className="profile">

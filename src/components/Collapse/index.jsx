@@ -2,9 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import PropTypes from 'prop-types'
-import './Collapse.scss'
 import { useLocation } from 'react-router'
-
 function Collapse({ title, children }) {
   const [isOpen, setIsOpen] = useState(false)
   const location = useLocation()

@@ -3,8 +3,6 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import PropTypes from 'prop-types'
-import './Slideshow.scss'
-
 function Slideshow({ galleryImages }) {
   const [index, setIndex] = useState(0)
 

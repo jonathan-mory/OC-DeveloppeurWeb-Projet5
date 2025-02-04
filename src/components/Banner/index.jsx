@@ -1,7 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './Banner.scss'
-
 function Banner({ children, imageUrl }) {
   const childrenWithClass = React.Children.map(children, (child) => {
     return React.cloneElement(child, { className: 'banner__title' })

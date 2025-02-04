@@ -1,7 +1,6 @@
 import Banner from '../../components/Banner'
 import AboutBanner from '../../assets/images/about_banner.jpg'
 import Collapse from '../../components/Collapse'
-import './About.scss'
 
 function About() {
   const aboutList = [

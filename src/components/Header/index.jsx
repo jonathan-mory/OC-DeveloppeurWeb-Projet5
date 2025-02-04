@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router'
 import Logo from '../../assets/images/logo_kasa.png'
-import './Header.scss'
 import { useEffect, useState } from 'react'
 
 function Header() {
