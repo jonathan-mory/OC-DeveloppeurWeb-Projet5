@@ -1,12 +1,26 @@
 @use '../../assets/styles/variables';
 
 .collapse {
-  width: 100%;
+  &--large {
+    width: 100%;
+  }
+
+  &--medium {
+    width: calc(50% - 35px);
+
+    @media screen and (max-width: 375px) {
+      width: 100%;
+    }
+  }
 
   &--closed {
     overflow: hidden;
     max-height: 54px;
     transition: max-height 400ms ease-in-out;
+
+    @media screen and (max-width: 375px) {
+      height: 30px;
+    }
   }
 
   &--open {
@@ -23,18 +37,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 375px) {
+      height: 30px;
+    }
   }
 
   &__title {
     font-size: variables.$font-size-large;
     font-weight: variables.$font-weight-bold;
     color: variables.$secondary-color;
+
+    @media screen and (max-width: 375px) {
+      font-size: 13px;
+    }
   }
 
   &__button {
     background: none;
     border: none;
     cursor: pointer;
+    padding: 0;
 
     &--open {
       transform: rotate(-180deg);
@@ -50,11 +73,19 @@
   &__icon {
     color: variables.$secondary-color;
     height: 24px;
+
+    @media screen and (max-width: 375px) {
+      height: 15px;
+    }
   }
 
   &__content {
-    padding: 15px;
+    padding: 20px;
     background-color: variables.$background-color;
     border-radius: variables.$collapse-radius;
+
+    @media screen and (max-width: 375px) {
+      font-size: 12px;
+    }
   }
 }
