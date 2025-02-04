@@ -1,0 +1,14 @@
+@use '../../assets/styles/variables';
+
+.tag {
+  background-color: variables.$primary-color;
+  border-radius: variables.$card-radius;
+  color: variables.$secondary-color;
+  font-size: variables.$font-size-small;
+  font-weight: variables.$font-weight-bold;
+  padding: 3px 22px 3px 22px;
+
+  @media screen and (max-width: 375px) {
+    font-size: 10px;
+  }
+}

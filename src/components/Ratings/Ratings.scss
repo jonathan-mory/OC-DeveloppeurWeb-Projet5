@@ -1,0 +1,7 @@
+.ratings__icon {
+  height: 25px;
+
+  @media screen and (max-width: 375px) {
+    height: 13px;
+  }
+}

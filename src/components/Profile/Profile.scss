@@ -1,0 +1,28 @@
+@use '../../assets/styles/variables';
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__name {
+    font-size: variables.$font-size-base;
+    font-weight: variables.$font-weight-regular;
+    color: variables.$primary-color;
+
+    @media screen and (max-width: 375px) {
+      font-size: 12px;
+    }
+  }
+
+  &__image {
+    border-radius: 50%;
+    height: 64px;
+    width: 64px;
+
+    @media screen and (max-width: 375px) {
+      height: 32px;
+      width: 32px;
+    }
+  }
+}
