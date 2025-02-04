@@ -1,5 +1,7 @@
 @use './assets/styles/variables';
 
+@import './components/Collapse/Collapse.scss';
+
 // Styles de base
 
 body {
@@ -26,10 +28,21 @@ header {
 
 main {
   @media screen and (max-width: 375px) {
-    margin: 0 20px 30px 20px;
+    margin: 0 20px 0 20px;
+  }
+}
+
+footer {
+  @media screen and (max-width: 375px) {
+    margin: 30px auto 0 auto;
   }
 }
 
 h1 {
   font-size: variables.$font-size-large-heading;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }

@@ -4,6 +4,10 @@
   position: relative;
   height: 415px;
 
+  @media screen and (max-width: 375px) {
+    height: 255px;
+  }
+
   &__button {
     background: none;
     border: none;
@@ -24,6 +28,10 @@
 
   &__icon {
     height: 80px;
+
+    @media screen and (max-width: 375px) {
+      height: 20px;
+    }
   }
 
   &__image {
@@ -41,5 +49,9 @@
     position: absolute;
     left: 50%;
     bottom: 25px;
+
+    @media screen and (max-width: 375px) {
+      display: none;
+    }
   }
 }

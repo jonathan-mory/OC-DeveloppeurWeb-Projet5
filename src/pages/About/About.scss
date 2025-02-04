@@ -2,7 +2,11 @@
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  gap: 50px;
+  gap: 40px;
+
+  @media screen and (max-width: 375px) {
+    gap: 20px;
+  }
 }
 
 .collapse-container {
@@ -13,5 +17,6 @@
 
   @media screen and (max-width: 375px) {
     width: 100%;
+    gap: 20px;
   }
 }
