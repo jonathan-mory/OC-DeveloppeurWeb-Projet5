@@ -1,19 +1,27 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
-import { useLocation } from 'react-router'
+import './Collapse.scss'
 function Collapse({ title, children }) {
   const [isOpen, setIsOpen] = useState(false)
-  const location = useLocation()
+  const [height, setHeight] = useState(0)
+  const contentElementRef = useRef(null)
+
+  useEffect(() => {
+    const tempMaxHeight = contentElementRef.current.style.maxHeight
+    contentElementRef.current.style.maxHeight = 'none'
+    setHeight(contentElementRef.current.scrollHeight)
+    contentElementRef.current.style.maxHeight = tempMaxHeight
+  }, [contentElementRef])
+
+  const maxHeight = useMemo(() => {
+    return isOpen ? height : 0
+  }, [isOpen, height])
 
   return (
     <div
-      className={`${
-        location.pathname === '/' || location.pathname === '/about'
-          ? 'collapse--large'
-          : 'collapse--medium'
-      } ${isOpen ? 'collapse--open' : 'collapse--closed'}`}
+      className={`collapse ${isOpen ? 'collapse--open' : 'collapse--closed'}`}
     >
       <div className="collapse__header">
         <span className="collapse__title">{title}</span>
@@ -29,13 +37,19 @@ function Collapse({ title, children }) {
             icon={faChevronUp}
             className={
               isOpen
-                ? ' collapse__icon collapse__icon--open'
+                ? 'collapse__icon collapse__icon--open'
                 : 'collapse__icon collapse__icon--closed'
             }
           />
         </button>
       </div>
-      <div className="collapse__content">{children}</div>
+      <div
+        className="collapse__content"
+        ref={contentElementRef}
+        style={{ maxHeight }}
+      >
+        <div className="collapse__content__text">{children}</div>
+      </div>
     </div>
   )
 }

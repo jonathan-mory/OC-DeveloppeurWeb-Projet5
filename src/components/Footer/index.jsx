@@ -1,4 +1,5 @@
 import DarkLogo from '../../assets/images/logo_kasa_dark.png'
+import './Footer.scss'
 
 function Footer() {
   return (

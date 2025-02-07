@@ -2,6 +2,7 @@ import Banner from '../../components/Banner'
 import Card from '../../components/Card'
 import HomeBanner from '../../assets/images/home_banner.jpg'
 import { useFetch } from '../../utils/hooks'
+import './Home.scss'
 
 function Home() {
   const dataUrl = '/accomodations.json'

@@ -1,5 +1,6 @@
 import { Link } from 'react-router'
 import PropTypes from 'prop-types'
+import './Card.scss'
 function Card({ title, coverUrl, id }) {
   return (
     <Link to={`/accommodation/${id}`} className="card__link">

@@ -1,6 +1,7 @@
 import Banner from '../../components/Banner'
 import AboutBanner from '../../assets/images/about_banner.jpg'
 import Collapse from '../../components/Collapse'
+import styles from './About.module.scss'
 
 function About() {
   const aboutList = [
@@ -27,9 +28,9 @@ function About() {
   ]
 
   return (
-    <main className="about">
+    <main className={styles.about}>
       <Banner imageUrl={AboutBanner} />
-      <div className="collapse-container">
+      <div className={styles['collapse-container']}>
         {aboutList.map((element, index) => (
           <Collapse key={`${element.title} - ${index}`} title={element.title}>
             <p>{element.content}</p>

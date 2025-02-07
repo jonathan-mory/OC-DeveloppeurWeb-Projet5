@@ -1,31 +1,10 @@
 @use '../../assets/styles/variables';
 
 .collapse {
-  &--large {
-    width: 100%;
-  }
+  width: 100%;
 
-  &--medium {
-    width: calc(50% - 35px);
-
-    @media screen and (max-width: 375px) {
-      width: 100%;
-    }
-  }
-
-  &--closed {
-    overflow: hidden;
-    max-height: 54px;
-    transition: max-height 400ms ease-in-out;
-
-    @media screen and (max-width: 375px) {
-      height: 30px;
-    }
-  }
-
-  &--open {
-    max-height: 300px;
-    transition: max-height 400ms ease-in-out;
+  @media screen and (max-width: 375px) {
+    height: 30px;
   }
 
   &__header {
@@ -80,12 +59,21 @@
   }
 
   &__content {
-    padding: 20px;
+    overflow: hidden;
     background-color: variables.$background-color;
     border-radius: variables.$collapse-radius;
+    transition: max-height 400ms ease-in-out;
+
+    &__text {
+      padding: 20px;
+    }
 
     @media screen and (max-width: 375px) {
       font-size: 12px;
+    }
+
+    .collapse--closed > &--closed {
+      max-height: 0;
     }
   }
 }

@@ -1,19 +1,4 @@
-// Chargement des modules de style des composants et pages React
-
 @use './assets/styles/variables';
-@use './components/Banner/Banner.scss';
-@use './components/Card/Card.scss';
-@use './components/Collapse/Collapse.scss';
-@use './components/Footer/Footer.scss';
-@use './components/Header/Header.scss';
-@use './components/Profile/Profile.scss';
-@use './components/Ratings/Ratings.scss';
-@use './components/Slideshow/Slideshow.scss';
-@use './components/Tag/Tag.scss';
-@use './pages/About/About.scss';
-@use './pages/Accommodation/Accommodation.scss';
-@use './pages/Error/Error.scss';
-@use './pages/Home/Home.scss';
 
 // Initialisation du style de base
 

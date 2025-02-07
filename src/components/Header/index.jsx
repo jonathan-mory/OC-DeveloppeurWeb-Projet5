@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router'
 import Logo from '../../assets/images/logo_kasa.png'
 import { useEffect, useState } from 'react'
+import './Header.scss'
 
 function Header() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 375)

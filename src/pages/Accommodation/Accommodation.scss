@@ -83,3 +83,14 @@
     order: 1;
   }
 }
+
+.collapse-container {
+  width: 100%;
+  display: flex;
+  gap: 75px;
+
+  @media screen and (max-width: 375px) {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
