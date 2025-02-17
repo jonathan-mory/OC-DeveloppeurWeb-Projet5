@@ -1,8 +1,22 @@
-# React + Vite
+# Projet 5 "Créez une application web de location immobilière avec React" de mon parcours "Développeur Web" chez OpenClassrooms
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Objectifs du projet
 
-Currently, two official plugins are available:
+- Initialiser une application React avec Vite
+- Configurer la navigation entre les pages de l'application avec React Router
+- Développeur des éléments de l'interface d'un site web grâce à des composants React
+- Mettre en oeuvre des animations CSS
+- Développer une interface web avec Sass
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies utilisées
+
+- JavaScript
+- React
+- React Router
+- Vite
+- Node.js
+- Sass
+
+## Comment lancer le site ?
+
+Clonez le répo Git et lancer la commande "npm run dev" dans le terminal
