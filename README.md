@@ -19,4 +19,4 @@
 
 ## Comment lancer le site ?
 
-Clonez le répo Git et lancer la commande "npm run dev" dans le terminal
+Clonez le répo Git et lancez la commande "npm run dev" dans le terminal
