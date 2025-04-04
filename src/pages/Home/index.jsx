@@ -5,7 +5,6 @@ import { useFetch } from '../../utils/hooks'
 import './Home.scss'
 
 function Home() {
-  // const dataUrl = '/accomodations.json'
   const dataUrl = `${import.meta.env.BASE_URL}accomodations.json`
   const { isLoading, data, error } = useFetch(dataUrl)
   console.log(data)

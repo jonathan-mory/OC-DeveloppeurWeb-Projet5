@@ -11,7 +11,7 @@ import './Accommodation.scss'
 function Accommodation() {
   const { accommodationId } = useParams()
   const navigate = useNavigate()
-  const dataUrl = '/accomodations.json'
+  const dataUrl = `${import.meta.env.BASE_URL}accomodations.json`
   const { isLoading, data, error } = useFetch(dataUrl)
 
   const accommodationSearched = useMemo(() => {
